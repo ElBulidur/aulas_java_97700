@@ -1,0 +1,35 @@
+package br.com.juliopereiradev.dao;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import br.com.juliopereiradev.modelo.Imovel;
+
+public class ImovelDao {
+	private Connection connection;
+	
+	public ImovelDao() {
+		this.connection = new ConnectionFactory().getConnection();
+	}
+	
+	public void adiciona(Imovel imovel) { 
+		String sql = "insert into imovel (proprietario, endereco, tipo," 
+			+ " contato, valor, dataInclusao) values (?,?,?,?,?,?)";
+		
+		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+			stmt.setString(1, imovel.getProprietario());
+			stmt.setString(2, imovel.getEndereco());
+			stmt.setString(3, imovel.getTipo());
+			stmt.setString(4, imovel.getContato());
+			stmt.setDouble(5, imovel.getValor());
+			stmt.setDate(6, new Date(imovel.getDataInclusao().getTimeInMillis())); 
+			stmt.executeUpdate(); 
+		} catch (SQLException ex) {
+			throw new RuntimeException(ex); 
+		}//fim try 
+	}//fim adiciona
+	}
+
+}
