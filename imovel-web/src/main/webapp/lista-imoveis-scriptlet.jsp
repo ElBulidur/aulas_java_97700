@@ -13,6 +13,10 @@
 	<thead align="left">
 		<th>Proprietario</th>
 		<th>Endereco</th>
+		<th>Tipo</th>
+		<th>Contato</th>
+		<th>Valor</th>
+		<th>Data</th>
 	</thead>
 	<% 
 		List<Imovel> imoveis = new ImovelDao().getLista();
@@ -21,6 +25,10 @@
 	<tr>
 		<td><%=i.getProprietario()%></td>
 		<td><%=i.getEndereco()%></td>
+		<td><%=i.getTipo()%></td>
+		<td><%=i.getContato()%></td>
+		<td><%=i.getValor()%></td>
+		<td><%=i.getDataInclusao().getTime()%></td>
 	</tr>
 	
 	<%} %>

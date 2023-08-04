@@ -72,5 +72,9 @@ public class Imovel {
 		this.dataInclusao = dataInclusao;
 	}
 	
+	public boolean getContatoEhEmail() {
+		return this.contato.contains("@");
+	}
+	
 
 }
