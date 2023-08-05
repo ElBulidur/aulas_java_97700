@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="imovel-web" path="/imovel-web" reloadable="true" source="org.eclipse.jst.jee.server:imovel-web"/></Host>
+      <Context docBase="imovel-mvc" path="/imovel-mvc" reloadable="true" source="org.eclipse.jst.jee.server:imovel-mvc"/></Host>
     </Engine>
   </Service>
 </Server>

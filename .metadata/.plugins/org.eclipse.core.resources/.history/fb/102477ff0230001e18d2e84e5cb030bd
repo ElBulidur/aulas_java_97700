@@ -1,5 +1,0 @@
-package br.com.juliopereira.dao;
-
-public class ConnectionFactory {
-
-}
