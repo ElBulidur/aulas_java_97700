@@ -12,6 +12,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Administrator\Downloads\imovel-despesas"/>
+			<item value="E:\ferramentas e bibliotecas"/>
 			<item value="E:\"/>
 			<item value="E:\projetosTestes"/>
 			<item value="E:\persistencia"/>

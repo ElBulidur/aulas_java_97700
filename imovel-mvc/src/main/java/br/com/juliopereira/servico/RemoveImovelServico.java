@@ -1,5 +1,7 @@
 package br.com.juliopereira.servico;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -19,6 +21,10 @@ public class RemoveImovelServico implements Servico {
 		
 		System.out.println("Excluindo o imóvel...!!");
 		new ImovelDao().remove(imovel);
+		
+		List<Imovel> imoveis = new ImovelDao().getLista();
+
+		request.setAttribute("imoveis", imoveis);
 		
 		return "/WEB-INF/lista-imoveis.jsp";
 	}

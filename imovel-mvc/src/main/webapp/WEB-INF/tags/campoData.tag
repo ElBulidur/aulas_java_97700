@@ -2,7 +2,10 @@
 
 <%@ attribute name="id" required="true" %>
 
-<input type="text" id="${id}" name="${id}" />
+<%@ attribute name="value" required="false" %>
+
+
+<input type="text" id="${id}" name="${id}" value="${value}"/>
 
 <script>
 $( function() {
